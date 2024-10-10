@@ -22,7 +22,7 @@ exports.register = async (req, res) => {
     user.password = await bcrypt.hash(password, salt);
     await user.save();
     const payload = { user: { id: user.id } };
-    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 3600 })
+    const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 86400 })
     return res.status(200).json({message:'Success',token})
   } catch (error) {
     console.error(error)
