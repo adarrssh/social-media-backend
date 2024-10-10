@@ -20,8 +20,8 @@ This document provides details about the APIs available for the Social Media Bac
 `POST /api/auth/register`
 ### Request
 - **Body Parameters:**
-  - `username` (string) - Required
-  - `email` (string) - Required
+  - `username` (string) - Unique and Required
+  - `email` (string) - Unique and Required
   - `password` (string) - Required
 
 ### Example Request
